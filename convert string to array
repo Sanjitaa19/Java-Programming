@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class Hello {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+
+        char[] charArr = str.toCharArray(); // Convert string to character array
+
+        for (char ch : charArr) { // Iterate over character array
+            System.out.print(ch + " "); // Print each character with a space
+        }
+    }
+}
