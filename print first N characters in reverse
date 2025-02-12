@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        String str = sc.nextLine(); // Read the string input
+        int N = sc.nextInt(); // Read the integer N
+        
+        // Extract first N characters and reverse them
+        StringBuilder sb = new StringBuilder(str.substring(0, N));
+        
+        System.out.println(sb.reverse().toString()); // Print the reversed substring
+        
+        sc.close();
+    }
+}
