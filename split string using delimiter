@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Hello {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine(); // Read the input string
+
+        String[] strArr = str.split(":"); // Split the string using ':'
+
+        for (String val : strArr) {
+            System.out.println(val); // Print each value in the array
+        }
+        
+        sc.close(); // Close the scanner
+    }
+}
