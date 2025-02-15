@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+public class SumOfTenthAndUnitDigits {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();
+        scanner.close();
+        
+        int unitDigit = N % 10;         // Extracts the unit digit
+        int tenthDigit = (N / 10) % 10; // Extracts the tenth digit
+
+        System.out.println(unitDigit + tenthDigit);
+    }
+}
