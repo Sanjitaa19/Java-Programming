@@ -7,10 +7,17 @@ public class Main {
         String str = sc.nextLine(); // Read the string input
         int N = sc.nextInt(); // Read the integer N
         
-        // Extract first N characters and reverse them
-        StringBuilder sb = new StringBuilder(str.substring(0, N));
+        // Extract first N characters from the string
+        String substring = str.substring(0, N);
         
-        System.out.println(sb.reverse().toString()); // Print the reversed substring
+        // Reverse the substring manually
+        String reversed = "";
+        for (int i = substring.length() - 1; i >= 0; i--) {
+            reversed += substring.charAt(i);
+        }
+        
+        // Print the reversed substring
+        System.out.println(reversed);
         
         sc.close();
     }
