@@ -1,0 +1,18 @@
+import java.util.Scanner;
+
+public class UppercaseCounter {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String S = scanner.nextLine();
+        scanner.close();
+        
+        int count = 0;
+        for (char ch : S.toCharArray()) {
+            if (Character.isUpperCase(ch)) {
+                count++;
+            }
+        }
+        
+        System.out.println(count);
+    }
+}
