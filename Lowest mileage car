@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Hello {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Read the input line and split by space
+        String[] tt = sc.nextLine().split(" ");
+
+        String tb = "";  // To store the car name with lowest mileage
+        float k = Float.MAX_VALUE;  // Start with a very high value
+
+        // Loop through each car entry
+        for (String t : tt) {
+            String[] parts = t.split("@"); // Split by '@'
+            
+            String name = parts[0];  // Extract car name
+            float num = Float.parseFloat(parts[1]);  // Convert mileage to float
+
+            // If current mileage is less than stored minimum, update
+            if (num < k) {  
+                k = num;
+                tb = name;
+            }
+        }
+
+        // Print car name with lowest mileage
+        System.out.println(tb);
+    }
+}
