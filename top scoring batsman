@@ -1,0 +1,24 @@
+import java.util.*;
+
+public class Hello {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = Integer.parseInt(sc.nextLine()); // Read the number of batsmen
+        String tb = ""; // Variable to store the top batsman's name
+        int mm = -1; // Variable to track the highest score
+
+        for (int i = 0; i < n; i++) {
+            String[] data = sc.nextLine().split(","); // Split name and score
+            String name = data[0]; // Extract batsman's name
+            int m = Integer.parseInt(data[1]); // Extract and convert score to int
+
+            if (m > mm) { // Correct condition to check highest score
+                mm = m; // Update highest score
+                tb = name; // Update top batsman's name
+            }
+        }
+        
+        System.out.println(tb); // Print the batsman with the highest score
+        sc.close(); // Close scanner
+    }
+}
