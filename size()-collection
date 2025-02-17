@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class Hello {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Read the space-separated country names as input
+        String spaceSeparatedCountries = sc.nextLine();
+
+        // Split the input string into an array
+        String[] countryList = spaceSeparatedCountries.split(" ");
+
+        // Convert array to a List (modifiable)
+        List<String> countries = new ArrayList<>(Arrays.asList(countryList));
+
+        // Check size condition
+        if (countries.size() > 5) {
+            System.out.println("small");
+        } else {
+            System.out.println("big");
+        }
+
+        sc.close();
+    }
+}
