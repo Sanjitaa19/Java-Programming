@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class Hello {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        // Read the space-separated string of country names
+        String spaceSeparatedCountries = sc.nextLine();
+
+        // Split the string into an array of country names
+        String[] countryList = spaceSeparatedCountries.split(" ");
+
+        // Convert array into a list
+        List<String> countries = Arrays.asList(countryList);
+
+        // Check if "Nepal" exists in the list and print the result
+        if (countries.contains("Nepal")) {
+            System.out.println("yes");
+        } else {
+            System.out.println("no");
+        }
+
+        sc.close();
+    }
+}
