@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+public class Hello {
+
+    public static void main(String[] args) {
+        List<Integer> numbers = new ArrayList<Integer>();
+        numbers.add(900);
+        numbers.add(500);
+        numbers.add(350);
+
+        // Sort the list
+        Collections.sort(numbers);
+
+        // Print the sorted list
+        for (int num : numbers) {
+            System.out.print(num + " ");
+        }
+    } // end of main
+} // end of class
