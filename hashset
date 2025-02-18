@@ -1,0 +1,22 @@
+import java.util.HashSet;
+import java.util.Set;
+
+public class Hello {
+    public static void main(String[] args) {
+        Set<String> movies = new HashSet<>();
+
+        movies.add("Terminator");
+        movies.add("Rambo");
+        movies.add("Godzilla");
+        movies.add("Jurassic Park");
+        movies.add("Enter The Dragon");
+        movies.add("KickBoxer");
+        movies.add("Enthiran - The Robot");
+        movies.add("Mission Impossible");
+        movies.add("Mission Impossible"); // Duplicate entry
+
+        for (String mov : movies) {
+            System.out.println(mov);
+        }
+    }
+}
