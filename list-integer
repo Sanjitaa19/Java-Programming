@@ -1,0 +1,19 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class Hello {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        List<Integer> numbers = new ArrayList<>();
+
+        int N = sc.nextInt();
+        for (int ctr = 0; ctr < N; ctr++) {
+            numbers.add(sc.nextInt());
+        }
+
+        for (Integer num : numbers) {
+            System.out.println(num);
+        }
+    }
+}
