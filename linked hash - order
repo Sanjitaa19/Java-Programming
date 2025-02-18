@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class Hello {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Set<String> values = new LinkedHashSet<>();
+
+        int n = sc.nextInt();
+        sc.nextLine(); // To consume the newline after the integer input
+
+        for (int i = 0; i < n; i++) {
+            values.add(sc.nextLine());
+        }
+
+        for (String mov : values) {
+            System.out.println(mov);
+        }
+    }
+}
