@@ -1,0 +1,26 @@
+import java.util.*;
+
+public class AP_NthTerm {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Read the first three terms
+        int a1 = sc.nextInt();
+        int a2 = sc.nextInt();
+        int a3 = sc.nextInt();
+        
+        // Read N
+        int n = sc.nextInt();
+        
+        // Find common difference (d)
+        int d = a2 - a1;
+        
+        // Calculate Nth term using AP formula: Tn = a + (n - 1) * d
+        int nthTerm = a1 + (n - 1) * d;
+        
+        // Print the result
+        System.out.println(nthTerm);
+        
+        sc.close();
+    }
+}
