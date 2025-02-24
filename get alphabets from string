@@ -1,0 +1,11 @@
+public class Main {
+    public static void main(String[] args) {
+        String str = "H3ll0 W0rld!";
+        
+        for (char ch : str.toCharArray()) {
+            if (Character.isLetter(ch)) {
+                System.out.print(ch);
+            }
+        }
+    }
+}
