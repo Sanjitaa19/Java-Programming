@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class Hello {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();  // Read the number of rows
+        sc.close();  // Close scanner
+
+        for (int i = 0; i < n; i++) {  // Loop for rows
+            for (int j = 0; j < i+1; j++) {  // Loop to print '*' i+1 times
+                System.out.print("* ");
+            }
+            System.out.println();  // Move to the next line
+        }
+    }
+}
