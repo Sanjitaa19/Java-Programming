@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class DecodeDigitalLock {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        sc.close();
+
+        int temp = n, ds = 0, d, sum = 0;
+        
+        // Count number of digits
+        while (temp > 0) {
+            ds++;
+            temp /= 10;
+        }
+
+        temp = n;
+        int even = 0, odd = 0;
+
+        // Calculate Armstrong sum and separate even/odd digit sums
+        while (temp > 0) {
+            d = temp % 10;
+            sum += Math.pow(d, ds);  // Accumulate Armstrong sum
+            
+            if (d % 2 == 0) {
+                even += d;  // Sum of even digits
+            } else {
+                odd += d;   // Sum of odd digits
+            }
+
+            temp /= 10;
+        }
+
+        // Check if Armstrong and print accordingly
+        if (sum == n) {
+            System.out.println(even);
+        } else {
+            System.out.println(odd);
+        }
+    }
+}
