@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class FirstLastOccurrences {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // Read input string
+        String S = sc.next();
+        sc.close();
+
+        // Find the first character
+        char firstChar = S.charAt(0);
+
+        // Find the first and last occurrences of firstChar
+        int firstIndex = S.indexOf(firstChar);
+        int lastIndex = S.lastIndexOf(firstChar);
+
+        // Calculate the number of characters between them
+        int result = lastIndex - firstIndex;
+
+        // Print the result
+        System.out.println(result);
+    }
+}
