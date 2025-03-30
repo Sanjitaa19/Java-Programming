@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class ClassCancellation {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Read N and M
+        int N = scanner.nextInt();
+        int M = scanner.nextInt();
+        scanner.nextLine(); // Consume newline
+        
+        // Read class start time
+        String startTime = scanner.nextLine();
+        
+        // Read arrival times
+        int onTimeCount = 0;
+        for (int i = 0; i < N; i++) {
+            String arrivalTime = scanner.next();
+            if (arrivalTime.compareTo(startTime) <= 0) {
+                onTimeCount++;
+            }
+        }
+        
+        scanner.close();
+        
+        // Determine if class is cancelled
+        System.out.println(onTimeCount >= M ? "No" : "Yes");
+    }
+}
