@@ -1,0 +1,41 @@
+import java.util.HashSet;
+import java.util.Scanner;
+
+public class DistinctElementsCount {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
+        
+        HashSet<Integer> set1 = new HashSet<>();
+        HashSet<Integer> set2 = new HashSet<>();
+        
+        for (int i = 0; i < num1; i++) {
+            set1.add(scanner.nextInt());
+        }
+        
+        for (int i = 0; i < num2; i++) {
+            set2.add(scanner.nextInt());
+        }
+        
+        scanner.close();
+        
+        // Count elements that are in set1 but not in set2
+        int distinctCount = 0;
+        for (int num : set1) {
+            if (!set2.contains(num)) {
+                distinctCount++;
+            }
+        }
+        
+        // Count elements that are in set2 but not in set1
+        for (int num : set2) {
+            if (!set1.contains(num)) {
+                distinctCount++;
+            }
+        }
+        
+        System.out.println(distinctCount);
+    }
+}
