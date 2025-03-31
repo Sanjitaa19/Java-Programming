@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class LEDGroups {
+    public static void main(String[] args) {
+        // Taking input
+        Scanner sc = new Scanner(System.in);
+        String[] leds = sc.nextLine().split(" ");
+        sc.close();
+        
+        // Number of LEDs
+        int n = leds.length;
+
+        // Each LED itself is a group
+        int groups = n;
+
+        // Checking for groups having the same color at the beginning and end
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (leds[i].equals(leds[j])) {
+                    groups++;
+                }
+            }
+        }
+
+        // Printing the result
+        System.out.println(groups);
+    }
+}
