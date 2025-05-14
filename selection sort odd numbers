@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class EasySortOddOnly {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+        
+        // Read array
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        // Selection sort only for odd numbers
+        for (int i = 0; i < n - 1; i++) {
+            if (arr[i] % 2 != 0) {  // Check if arr[i] is odd
+                int minIndex = i;
+                for (int j = i + 1; j < n; j++) {
+                    if (arr[j] % 2 != 0 && arr[j] < arr[minIndex]) {
+                        minIndex = j;
+                    }
+                }
+                // Swap if needed
+                int temp = arr[i];
+                arr[i] = arr[minIndex];
+                arr[minIndex] = temp;
+            }
+        }
+
+        // Print final array
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
