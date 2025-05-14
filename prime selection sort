@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class SortPrimesOnly {
+
+    static boolean isPrime(int num) {
+        if (num <= 1)
+            return false;
+        for (int i = 2; i <= Math.sqrt(num); i++)
+            if (num % i == 0)
+                return false;
+        return true;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int[] arr = new int[n];
+
+        // Input
+        for (int i = 0; i < n; i++)
+            arr[i] = sc.nextInt();
+
+        // Selection sort for primes only
+        for (int i = 0; i < n - 1; i++) {
+            if (isPrime(arr[i])) {
+                int minIndex = i;
+                for (int j = i + 1; j < n; j++) {
+                    if (isPrime(arr[j]) && arr[j] < arr[minIndex]) {
+                        minIndex = j;
+                    }
+                }
+                // Swap
+                int temp = arr[i];
+                arr[i] = arr[minIndex];
+                arr[minIndex] = temp;
+            }
+        }
+
+        // Output
+        for (int num : arr)
+            System.out.print(num + " ");
+    }
+}
