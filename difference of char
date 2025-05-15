@@ -1,0 +1,19 @@
+
+class Solution {
+    public char findTheDifference(String s, String t) {
+        int sumS = 0, sumT = 0;
+
+        // Add ASCII values of all characters in s
+        for (char ch : s.toCharArray()) {
+            sumS += ch;
+        }
+
+        // Add ASCII values of all characters in t
+        for (char ch : t.toCharArray()) {
+            sumT += ch;
+        }
+
+        // The difference will be the added character
+        return (char)(sumT - sumS);
+    }
+}
