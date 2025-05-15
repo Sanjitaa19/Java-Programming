@@ -1,0 +1,8 @@
+class Solution {
+    public int countSegments(String s) {
+        int count = 0;
+        String[] w = s.trim().split(" ");  // split by one or more spaces
+        if (s.trim().isEmpty()) return 0;    // handle case with only spaces
+        return w.length;
+    }
+}
